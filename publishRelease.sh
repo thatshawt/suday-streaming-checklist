@@ -14,7 +14,7 @@ echo "Creating a new release in github"
 linux-amd64-github-release release --user ${GITHUB_ORGANIZATION} --repo ${GITHUB_REPO} --tag "${VERSION_NAME}" --name "${VERSION_NAME}"
 
 echo "Uploading the artifacts into github"
-files=( target/*.jar ) # get the jar file in target folder
+files=( ./target/*.jar ) # get the jar file in target folder
 
 # shellcheck disable=SC2086
 linux-amd64-github-release upload --user ${GITHUB_ORGANIZATION} --repo ${GITHUB_REPO} --tag ${VERSION_NAME} \
