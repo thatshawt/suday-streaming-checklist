@@ -12,6 +12,7 @@ linux-amd64-github-release delete --user ${GITHUB_ORGANIZATION} --repo ${GITHUB_
 
 echo "Creating a new release in github"
 linux-amd64-github-release release --user ${GITHUB_ORGANIZATION} --repo ${GITHUB_REPO} --tag "${VERSION_NAME}" --name "${VERSION_NAME}"
+sleep 10 # sleep to make sure that github updates and all...
 
 echo "Uploading the artifacts into github"
 files=( ./target/*.jar ) # get the jar file in target folder
