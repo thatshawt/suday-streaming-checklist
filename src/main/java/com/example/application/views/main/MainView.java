@@ -24,13 +24,8 @@ public class MainView extends VerticalLayout {
     private final List<Checkbox> checks;
 
     public MainView() {
-//        title = new H1("Sunday Streaming Checklist");
         title = new ShartifyText("Sunday Streaming Checklist");
         title.addClassName("unselect");
-
-//        title.addClickListener((event) -> {
-//            title.setText(shittify(title.getText()));
-//        });
 
         add(title);
 
