@@ -40,8 +40,8 @@ public class MainView extends VerticalLayout {
             add(checkbox);
 
         add(new Paragraph("Impressive. Very nice. Let's see Paul Allen's card."));
-        add(new Image("https://c.tenor.com/LIX8OttaVncAAAAS/foss-no-bitches.gif",
-                "no maidens"));
+        add(new Image("https://c.tenor.com/hi9RxkFRriAAAAAM/no-maidens-megamind.gif",
+                "no maidens?"));
     }
 
 }
