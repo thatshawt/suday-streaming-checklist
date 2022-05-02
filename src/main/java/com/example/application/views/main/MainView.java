@@ -4,6 +4,7 @@ import com.example.application.ShartifyText;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -39,7 +40,8 @@ public class MainView extends VerticalLayout {
             add(checkbox);
 
         add(new Paragraph("Impressive. Very nice. Let's see Paul Allen's card."));
-
+        add(new Image("https://c.tenor.com/LIX8OttaVncAAAAS/foss-no-bitches.gif",
+                "no maidens"));
     }
 
 }
