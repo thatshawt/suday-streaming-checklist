@@ -41,7 +41,7 @@ public class MainView extends VerticalLayout {
 
         add(new Paragraph("Impressive. Very nice. Let's see Paul Allen's card."));
         add(new Image("https://c.tenor.com/hi9RxkFRriAAAAAM/no-maidens-megamind.gif",
-                "no maidens?"));,
+                "no maidens?"));
         add(new Image("https://c.tenor.com/bVh8C-q-TG4AAAAC/interstellar-cost.gif", "Yoinky Sploinky"));
         add(new Image("https://c.tenor.com/y0tNqpVBR9AAAAAd/thanos-avengers.gif", "Thanos, The Mad Titan"));
         add(new Image("https://c.tenor.com/J3qLu0yobXYAAAAC/thanos-philosophy.gif", "Strongest Will"));
