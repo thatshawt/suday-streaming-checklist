@@ -39,7 +39,7 @@ public class Application extends SpringBootServletInitializer implements AppShel
             //before we start the application we must append the password into the application.properties file
 //            String propFileContent = Files.readString(Paths.get(applicationProp.toURI()));
             if (propFileContent.contains("vaadin.productionMode=true")) { //cus lmao
-                String content = Files.readString(Path.of("/var/password/certpass.txt"));
+                String content = Files.readString(Path.of("/run/secrets/certpass.txt"));
                 String password = content.strip();//idk just incase
 
                 //apparently spring boot supports properties this way
