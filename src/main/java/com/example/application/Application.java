@@ -8,9 +8,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * The entry point of the Spring Boot application.
@@ -26,19 +30,22 @@ import java.nio.file.Path;
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
 
     public static void main(String[] args) {
-        //before we start the application we must append the password into the application.properties file
-        String production = System.getProperty("vaadin.productionMode");
-        System.out.println(System.getProperties());
-        if(production.equals("true")) {
-            try {
+        try {
+            URL applicationProp = Application.class.getClassLoader()
+                                    .getResource("application.properties");
+            //before we start the application we must append the password into the application.properties file
+            String propFileContent = Files.readString(Paths.get(applicationProp.toURI()));
+            if (propFileContent.contains("vaadin.productionMode=true")) { //cus lmao
                 String content = Files.readString(Path.of("/var/password/certpass.txt"));
                 String password = content.strip();//idk just incase
-                System.setProperty("server.ssl.key-store-password", password);//finally
 
+                //apparently spring boot supports properties this way
+                //thanks https://www.baeldung.com/properties-with-spring
+                System.setProperty("server.ssl.key-store-password", password);//finally
                 System.setProperty("server.ssl.enabled", "true");
-            } catch (IOException e) {
-                e.printStackTrace();
             }
+        }catch(Exception e){
+            e.printStackTrace();
         }
 
         SpringApplication.run(Application.class, args);
