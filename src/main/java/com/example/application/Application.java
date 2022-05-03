@@ -28,6 +28,7 @@ public class Application extends SpringBootServletInitializer implements AppShel
     public static void main(String[] args) {
         //before we start the application we must append the password into the application.properties file
         String production = System.getProperty("vaadin.productionMode");
+        System.out.println(System.getProperties());
         if(production.equals("true")) {
             try {
                 String content = Files.readString(Path.of("/var/password/certpass.txt"));
