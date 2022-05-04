@@ -17,4 +17,4 @@ export class MyElement extends LitElement {
 
 }
 
-window.customElements.define('random-text', MyElement);
+window.customElements.define('rick-roll', MyElement);
