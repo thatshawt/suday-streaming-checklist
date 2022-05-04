@@ -45,6 +45,16 @@ public class Application extends SpringBootServletInitializer implements AppShel
                 //thanks https://www.baeldung.com/properties-with-spring
                 System.setProperty("server.ssl.key-store-password", password);//finally
                 System.setProperty("server.ssl.enabled", "true");
+                System.setProperty("server.ssl.key-store","/run/secrets/certstore.p12");
+                /*
+                server.ssl.protocol=TLS
+                server.ssl.key-store-type=pkcs12
+                server.ssl.key-alias=springboot
+                */
+                System.setProperty("server.ssl.protocol","TLS");
+                System.setProperty("server.ssl.key-store-type","pkcs12");
+                System.setProperty("server.ssl.key-alias","springboot");
+
             }
         }catch(Exception e){
             e.printStackTrace();
