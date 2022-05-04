@@ -1,7 +1,7 @@
 package com.example.application.views.main;
 
-import com.example.application.DarkThemeHtml;
-import com.example.application.ShartifyText;
+import com.example.application.elements.RickRoll;
+import com.example.application.elements.ShartifyText;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -17,13 +17,11 @@ import java.util.List;
 public class MainView extends VerticalLayout {
 
     private final ShartifyText title;
+    private final RickRoll roll;
     private final List<Checkbox> checks;
 
     public MainView() {
-
-        add(new DarkThemeHtml());
-//        DarkThemeHtml.loadJavascript();
-
+        roll = new RickRoll("bruhj");
         title = new ShartifyText("Sunday Streaming Checklist");
         title.addClassName("unselect");
 
@@ -40,7 +38,7 @@ public class MainView extends VerticalLayout {
         add(new Paragraph("Impressive. Very nice. Let's see Paul Allen's card."));
         add(new Image("https://c.tenor.com/hi9RxkFRriAAAAAM/no-maidens-megamind.gif",
                 "no maidens?"));
-        add(new Image("https://c.tenor.com/bVh8C-q-TG4AAAAC/interstellar-cost.gif", "Yoinky Sploinky"));
+        add(new Image("https://c.tenor.com/bVh8C-q-TG4AAAAC/interstellar-cost.gif", "Sploinky Yoinky"));
         add(new Image("https://c.tenor.com/y0tNqpVBR9AAAAAd/thanos-avengers.gif", "Thanos, The Mad Titan"));
         add(new Image("https://c.tenor.com/J3qLu0yobXYAAAAC/thanos-philosophy.gif", "Strongest Will"));
         add(new Image("https://c.tenor.com/5bnBHE0rvtgAAAAC/infinity-war-avengers.gif", "~Everything..."));
