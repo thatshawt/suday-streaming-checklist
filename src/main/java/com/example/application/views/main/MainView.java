@@ -1,22 +1,16 @@
 package com.example.application.views.main;
 
+import com.example.application.DarkThemeHtml;
 import com.example.application.ShartifyText;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.checkbox.Checkbox;
-import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 @PageTitle("Sunday Streaming Checklist")
 @Route(value = "")
@@ -26,6 +20,10 @@ public class MainView extends VerticalLayout {
     private final List<Checkbox> checks;
 
     public MainView() {
+
+        add(new DarkThemeHtml());
+//        DarkThemeHtml.loadJavascript();
+
         title = new ShartifyText("Sunday Streaming Checklist");
         title.addClassName("unselect");
 
