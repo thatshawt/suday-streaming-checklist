@@ -1,7 +1,7 @@
 package com.example.application.views.main;
 
 import com.example.application.DarkThemeHtml;
-import com.example.application.ShartifyText;
+import com.example.application.elements.ShartifyText;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
