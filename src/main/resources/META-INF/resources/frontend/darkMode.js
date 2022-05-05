@@ -1,0 +1,1 @@
+document.getElementsByTagName("html")[0].setAttribute("theme", "dark");
